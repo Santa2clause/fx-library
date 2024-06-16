@@ -3,7 +3,7 @@ require('dotenv').config();
 
 async function fetchRates(accessKey) {
   try {
-    const response = await axios.get(`${FOREX_LATEST_V3}?symbol=all_forex&access_key=${accessKey}`);
+    const response = await axios.get(`https://fcsapi.com/api-v3/forex/latest?symbol=all_forex&access_key=${accessKey}`);
     return response.data.response;
   } catch (error) {
     console.error('Error fetching rates:', error.message);
