@@ -7,12 +7,6 @@ The project includes a Node.js backend with an Express.js server and a PostgreSQ
 
 - [Features](#features)
 - [Installation](#installation)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [API Endpoints](#api-endpoints)
-- [Database Schema](#database-schema)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
