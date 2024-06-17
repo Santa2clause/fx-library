@@ -3,7 +3,6 @@ const pool = require('../db');
 
 async function insertCurrencyCodes(req, res) {
   try {
-    // Select distinct currency codes from forex_data
     const result = await pool.query(`
       SELECT DISTINCT unnest(string_to_array(symbol, '/')) AS currency_code
       FROM forex_data
@@ -11,7 +10,6 @@ async function insertCurrencyCodes(req, res) {
       ORDER BY currency_code;
     `);
 
-    // Insert new currency codes into forex_codes table
     for (const row of result.rows) {
       const currencyCode = row.currency_code;
       const existingCode = await pool.query(

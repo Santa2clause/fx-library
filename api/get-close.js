@@ -1,5 +1,5 @@
 const { Pool } = require('pg');
-const pool = require('../db'); // Adjust the path if necessary
+const pool = require('../db');
 
 async function getCloseValue(req, res) {
   try {
